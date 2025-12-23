@@ -3,13 +3,26 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
-    <div className="page gap-[100px]">
+    <div className="page">
       <section id="overview">
-        <h1>Hi, I'm Jerwin</h1>
-        <p>
-          BSIT student specializing in Service Management, aspiring Web
-          Developer.
-        </p>
+        <div className="hero-content">
+          <h1>Hi, I'm Jerwin</h1>
+          <p>
+            BSIT student specializing in Service Management, aspiring Web
+            Developer.
+          </p>
+        </div>
+
+        <div className="hero-image">
+          <div className="cube">
+            <div className="face front"></div>
+            <div className="face back"></div>
+            <div className="face right"></div>
+            <div className="face left"></div>
+            <div className="face top"></div>
+            <div className="face bottom"></div>
+          </div>
+        </div>
       </section>
 
       <Separator />

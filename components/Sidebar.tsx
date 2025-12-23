@@ -33,19 +33,19 @@ export default function Sidebar() {
         </div>
 
         <nav className="nav">
-          <a href="#about">
+          <a href="#overview">
             <FaHome size={16} style={{ marginRight: "8px" }} /> Overview
           </a>
-          <a href="#skills">
+          <a href="#about">
             <FaUser size={16} style={{ marginRight: "8px" }} /> About Me
           </a>
-          <a href="#projects">
+          <a href="#skills">
             <FaProjectDiagram size={16} style={{ marginRight: "8px" }} /> Skills
           </a>
-          <a href="#experience">
+          <a href="#projects">
             <FaBriefcase size={16} style={{ marginRight: "8px" }} /> Projects
           </a>
-          <a href="#contact">
+          <a href="#experience">
             <FaEnvelope size={16} style={{ marginRight: "8px" }} /> Experience
           </a>
         </nav>
