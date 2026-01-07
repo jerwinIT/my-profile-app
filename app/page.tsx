@@ -225,8 +225,10 @@ export default function ProfilePage() {
                 Hi, I'm Jerwin
               </h2>
               <p className="text-xl lg:text-2xl xl:text-3xl text-muted-foreground text-balance max-w-4xl">
-                A passionate full-stack developer crafting beautiful, functional
-                web experiences
+                I’m an Information Technology Service Management (ITSM) major
+                focused on building and supporting reliable systems that improve
+                processes, enhance user experience, and align technology with
+                service-driven goals.
               </p>
             </div>
           </section>
@@ -294,6 +296,25 @@ export default function ProfilePage() {
             <div className="grid gap-6 md:grid-cols-2 xl:gap-8">
               <Card>
                 <CardHeader className="lg:p-6">
+                  <CardTitle className="lg:text-xl">
+                    Programming Language
+                  </CardTitle>
+                  <CardDescription className="lg:text-base">
+                    Building interactive user interfaces
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="lg:px-6 lg:pb-6">
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">JavaScript</Badge>
+                    <Badge variant="secondary">TypeScript</Badge>
+                    <Badge variant="secondary">PHP</Badge>
+                    <Badge variant="secondary">Python</Badge>
+                    <Badge variant="secondary">C++</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="lg:p-6">
                   <CardTitle className="lg:text-xl">Frontend</CardTitle>
                   <CardDescription className="lg:text-base">
                     Building interactive user interfaces
@@ -302,10 +323,13 @@ export default function ProfilePage() {
                 <CardContent className="lg:px-6 lg:pb-6">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary">React</Badge>
-                    <Badge variant="secondary">Next.js</Badge>
+                    <Badge variant="secondary">React Native</Badge>
                     <Badge variant="secondary">TypeScript</Badge>
+                    <Badge variant="secondary">Next.js (React, SSR/SSG)</Badge>
+                    <Badge variant="secondary">Flutter</Badge>
                     <Badge variant="secondary">Tailwind CSS</Badge>
-                    <Badge variant="secondary">JavaScript</Badge>
+                    <Badge variant="secondary">Bootstrap</Badge>
+                    <Badge variant="secondary">Shadcn</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -320,9 +344,25 @@ export default function ProfilePage() {
                 <CardContent className="lg:px-6 lg:pb-6">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary">Node.js</Badge>
-                    <Badge variant="secondary">PostgreSQL</Badge>
+                    <Badge variant="secondary">Express.js</Badge>
+                    <Badge variant="secondary">Next.js API Routes</Badge>
+                    <Badge variant="secondary">PHP</Badge>
                     <Badge variant="secondary">REST APIs</Badge>
-                    <Badge variant="secondary">GraphQL</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader className="lg:p-6">
+                  <CardTitle className="lg:text-xl">Databases</CardTitle>
+                  <CardDescription className="lg:text-base">
+                    Server-side development & APIs
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="lg:px-6 lg:pb-6">
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">PostgreSQL</Badge>
+                    <Badge variant="secondary">MySQL</Badge>
                     <Badge variant="secondary">MongoDB</Badge>
                   </div>
                 </CardContent>
@@ -340,9 +380,10 @@ export default function ProfilePage() {
                 <CardContent className="lg:px-6 lg:pb-6">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary">Git</Badge>
-                    <Badge variant="secondary">Docker</Badge>
+                    <Badge variant="secondary">Jira</Badge>
+                    <Badge variant="secondary">Trello</Badge>
                     <Badge variant="secondary">Vercel</Badge>
-                    <Badge variant="secondary">AWS</Badge>
+                    <Badge variant="secondary">Hostinger</Badge>
                     <Badge variant="secondary">CI/CD</Badge>
                   </div>
                 </CardContent>
