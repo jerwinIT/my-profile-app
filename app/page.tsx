@@ -36,7 +36,8 @@ import {
 export default function ProfilePage() {
   const [activeSection, setActiveSection] = useState("overview");
   const [activeProjectTab, setActiveProjectTab] = useState("web");
-  const [activeExperienceTab, setActiveExperienceTab] = useState("experience");
+  const [activeExperienceTab, setActiveExperienceTab] =
+    useState("certification");
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
@@ -531,6 +532,19 @@ export default function ProfilePage() {
 
             <div className="flex gap-2 mb-6 lg:mb-8 border-b border-border">
               <button
+                onClick={() => setActiveExperienceTab("certification")}
+                className={`px-4 py-2 text-sm font-medium transition-colors relative ${
+                  activeExperienceTab === "certification"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Certification
+                {activeExperienceTab === "certification" && (
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
+                )}
+              </button>
+              <button
                 onClick={() => setActiveExperienceTab("experience")}
                 className={`px-4 py-2 text-sm font-medium transition-colors relative ${
                   activeExperienceTab === "experience"
@@ -556,19 +570,6 @@ export default function ProfilePage() {
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
                 )}
               </button>
-              <button
-                onClick={() => setActiveExperienceTab("certification")}
-                className={`px-4 py-2 text-sm font-medium transition-colors relative ${
-                  activeExperienceTab === "certification"
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                Certification
-                {activeExperienceTab === "certification" && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
-                )}
-              </button>
             </div>
 
             <div className="space-y-4 lg:space-y-6">
@@ -586,15 +587,29 @@ export default function ProfilePage() {
                         {item.period}
                       </span>
                     </div>
-                    <CardDescription className="lg:text-base">
-                      {item.organization}
+                    <CardDescription className="lg:text-base flex flex-col">
+                      <span>{item.organization}</span>
+
+                      {activeExperienceTab === "certification" &&
+                        item.certificateUrl && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="mt-4 gap-2 bg-transparent w-fit"
+                            asChild
+                          >
+                            <a
+                              href={item.certificateUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                              View Certificate
+                            </a>
+                          </Button>
+                        )}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="lg:px-6 lg:pb-6">
-                    <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
-                  </CardContent>
                 </Card>
               ))}
             </div>

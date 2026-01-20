@@ -1,37 +1,43 @@
 export const webProjects = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack online store with payment integration",
+    title: "GeoSME Batangas",
+    description: "Web-based GIS-Enabled SME Directory and Analytics System",
     details:
       "Built a complete e-commerce solution with product management, shopping cart, and Stripe payment integration. Features real-time inventory updates and admin dashboard.",
-    technologies: ["Next.js", "PostgreSQL", "Stripe"],
-    demoUrl: "https://example.com/demo",
-    repoUrl: "https://github.com/johndoe/ecommerce",
+    technologies: [
+      "Next.js Fullstack",
+      "TypeScript",
+      "PostgreSQL",
+      "RestAPI",
+      "LeafletJS",
+    ],
+    demoUrl: "https://geosme-batangas.com",
+    repoUrl: "https://github.com/jerwinIT/geosme-batangas",
   },
   {
-    title: "Task Management App",
-    description: "Collaborative project management tool",
+    title: "Resource Generation Office",
+    description: "Web-based Inventory and Sales Management System",
     details:
       "Developed a real-time task management application with team collaboration features, drag-and-drop interface, and progress tracking.",
-    technologies: ["React", "Node.js", "WebSocket"],
+    technologies: ["React", "Express.js", "Node.js", "PostgreSQL", "RestAPI"],
     demoUrl: "https://example.com/demo",
     repoUrl: "https://github.com/johndoe/taskapp",
   },
   {
-    title: "Weather Dashboard",
-    description: "Real-time weather tracking application",
+    title: "JPJ Motorcycle Parts and Accessories",
+    description: "Web-based Inventory and Sales Management System",
     details:
       "Created a beautiful weather dashboard with geolocation, 7-day forecasts, and interactive weather maps using third-party APIs.",
-    technologies: ["TypeScript", "REST API", "Charts"],
+    technologies: ["React", "Express.js", "Node.js", "PostgreSQL", "RestAPI"],
     demoUrl: "https://example.com/demo",
     repoUrl: "https://github.com/johndoe/weather",
   },
   {
-    title: "Social Media Analytics",
+    title: "My Portfolio Website",
     description: "Analytics platform for social media insights",
     details:
       "Built an analytics dashboard that visualizes social media metrics with interactive charts, data export, and scheduled reports.",
-    technologies: ["Next.js", "D3.js", "MongoDB"],
+    technologies: ["Next.js", "React.js", "Tailwind CSS"],
     demoUrl: "https://example.com/demo",
     repoUrl: "https://github.com/johndoe/analytics",
   },
@@ -69,44 +75,51 @@ export const designProjects = [
 
 export const experienceData = [
   {
-    title: "Senior Frontend Engineer",
-    organization: "Tech Company Inc.",
-    period: "2022 - Present",
+    title: "Backend Developer Intern",
+    organization: "Tech Executive Labs",
+    period: "February 2025 - April 2025",
     description:
       "Leading frontend development for enterprise applications. Building and maintaining critical components across the platform, ensuring accessibility standards and best practices. Collaborating with cross-functional teams to deliver high-quality user experiences.",
-  },
-  {
-    title: "Full Stack Developer",
-    organization: "Digital Agency",
-    period: "2020 - 2022",
-    description:
-      "Developed custom web applications for clients across various industries. Worked on both frontend and backend, implementing features from design to deployment. Managed projects and coordinated with designers and clients.",
   },
 ];
 
 export const educationData = [
   {
-    title: "Bachelor of Computer Science",
-    organization: "University Name",
-    period: "2016 - 2020",
+    title: "Bachelor of Information Technology Major in Service Management",
+    organization: "Batangas State University",
+    period: "August 2022 - Present",
     description:
-      "Graduated with honors. Focused on software engineering, web development, and human-computer interaction. Completed senior thesis on accessible web design patterns.",
+      "Dean’s Lister with a strong foundation in web development, software engineering, and IT service management.",
   },
 ];
 
 export const certificationData = [
   {
-    title: "AWS Certified Developer",
-    organization: "Amazon Web Services",
-    period: "2023",
-    description:
-      "Professional certification demonstrating expertise in developing and maintaining AWS applications.",
+    title: "Introduction to Red Hat OpenShift AI (AI262F - RHA) - Ver. 2.13",
+    organization: "Red Hat",
+    period: "July 2025",
+    certificateUrl:
+      "https://www.credly.com/badges/7984f0ff-ee48-450a-93a7-362783a434dc/public_url",
   },
   {
-    title: "React Advanced Certification",
-    organization: "Meta",
-    period: "2022",
-    description:
-      "Advanced certification covering React patterns, performance optimization, and best practices.",
+    title:
+      "Red Hat Application Development I: Programming in Java EE (AD183 - RHA) - Ver. 7.0",
+    organization: "Red Hat",
+    period: "July 2025",
+    certificateUrl:
+      "https://www.credly.com/badges/7984f0ff-ee48-450a-93a7-362783a434dc/public_url",
+  },
+  {
+    title: "Next.js App Router Fundamentals ",
+    organization: "Vercel",
+    period: "May 2025",
+    certificateUrl: "https://aws.amazon.com/certification",
+  },
+  {
+    title: "The Complete Full-Stack Web Development Bootcamp",
+    organization: "Udemy",
+    period: "January 2026",
+    certificateUrl:
+      -"https://www.udemy.com/certificate/UC-6cd0c234-715d-49ba-829c-9388f60527f1/?lid=832xombx7j48&utm_source=braze&utm_campaign=250611_Student-MX_EM-Lifecycle_Course-Completion-MVP_T1&utm_medium=email&utm_term=MultiLANG_Hero-12-CTA_Secondary-color&utm_audience=MX&utm_content=udemy_braze.1cb6d7b71b9ac5f2f9c5c49038dcb84c",
   },
 ];
