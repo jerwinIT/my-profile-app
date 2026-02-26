@@ -15,13 +15,31 @@ export const webProjects = [
     repoUrl: "https://github.com/jerwinIT/geosme-batangas",
   },
   {
+    title: "GeoInvest Batangas",
+    description: "A geospatial decision-support platform for identifying high-potential business opportunities across Batangas municipalities through demographic, registry, and spatial analytics.",
+    details:
+      "Developed a real-time task management application with team collaboration features, drag-and-drop interface, and progress tracking.",
+    technologies: ["Next.js", "TailwindCSS", "ShadCN", "PostgreSQL", "RestAPI", "LeafletJS"],
+    demoUrl: "https://geoinvest-batangas.vercel.app",
+    repoUrl: "https://github.com/jerwinIT/geoinvest-batangas",
+  },
+  {
+    title: "GeoCrime Batangas",
+    description: "A geospatial crime mapping and analysis platform for Batangas, providing crime data visualization, hotspot identification,  to enhance public safety and law enforcement strategies.",
+    details:
+      "Developed a real-time task management application with team collaboration features, drag-and-drop interface, and progress tracking.",
+    technologies: ["Next.js", "TailwindCSS", "ShadCN", "PostgreSQL", "RestAPI", "LeafletJS"],
+    demoUrl: "https://geocrime-batangas.vercel.app",
+    repoUrl: "https://github.com/jerwinIT/geocrime",
+  },
+  {
     title: "Resource Generation Office",
     description: "Web-based Inventory and Sales Management System",
     details:
       "Developed a real-time task management application with team collaboration features, drag-and-drop interface, and progress tracking.",
     technologies: ["React", "Express.js", "Node.js", "PostgreSQL", "RestAPI"],
     demoUrl: "https://example.com/demo",
-    repoUrl: "https://github.com/johndoe/taskapp",
+    repoUrl: "https://github.com/jerwinIT/resource-generation-office",
   },
   {
     title: "JPJ Motorcycle Parts and Accessories",
@@ -29,8 +47,8 @@ export const webProjects = [
     details:
       "Created a beautiful weather dashboard with geolocation, 7-day forecasts, and interactive weather maps using third-party APIs.",
     technologies: ["React", "Express.js", "Node.js", "PostgreSQL", "RestAPI"],
-    demoUrl: "https://example.com/demo",
-    repoUrl: "https://github.com/johndoe/weather",
+    demoUrl: "",
+    repoUrl: "https://github.com/jerwinIT/JPJ-Inventory-and-Sales-Management-System",
   },
   {
     title: "My Portfolio Website",
@@ -120,6 +138,6 @@ export const certificationData = [
     organization: "Udemy",
     period: "January 2026",
     certificateUrl:
-      -"https://www.udemy.com/certificate/UC-6cd0c234-715d-49ba-829c-9388f60527f1/?lid=832xombx7j48&utm_source=braze&utm_campaign=250611_Student-MX_EM-Lifecycle_Course-Completion-MVP_T1&utm_medium=email&utm_term=MultiLANG_Hero-12-CTA_Secondary-color&utm_audience=MX&utm_content=udemy_braze.1cb6d7b71b9ac5f2f9c5c49038dcb84c",
+      "https://www.udemy.com/certificate/UC-6cd0c234-715d-49ba-829c-9388f60527f1/?lid=832xombx7j48&utm_source=braze&utm_campaign=250611_Student-MX_EM-Lifecycle_Course-Completion-MVP_T1&utm_medium=email&utm_term=MultiLANG_Hero-12-CTA_Secondary-color&utm_audience=MX&utm_content=udemy_braze.1cb6d7b71b9ac5f2f9c5c49038dcb84c",
   },
 ];
