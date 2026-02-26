@@ -1,15 +1,9 @@
 "use client";
+import Image from "next/image";
 
 import { useEffect, useState } from "react";
 import {
-  Home,
-  User,
-  Code,
-  Briefcase,
-  GraduationCap,
   Github,
-  Linkedin,
-  Facebook,
   ExternalLink,
   Moon,
   Sun,
@@ -35,10 +29,24 @@ import {
 
 export default function ProfilePage() {
   const [activeSection, setActiveSection] = useState("overview");
-  const [activeProjectTab, setActiveProjectTab] = useState("web");
+  const [activeProjectTab, setActiveProjectTab] = useState<"web" | "design">(
+    "web"
+  );
   const [activeExperienceTab, setActiveExperienceTab] =
     useState("certification");
   const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const projectTabs = [
+    { id: "web", label: "Web Development Projects" },
+    { id: "design", label: "UI/UX and Figma Designs" },
+  ] as const;
+
+  const projectData = {
+    web: webProjects,
+    design: designProjects,
+  };
+
+  const activeProjects = projectData[activeProjectTab];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,6 +92,15 @@ export default function ProfilePage() {
     }
   };
 
+  const openDemoLink = (demoUrl?: string) => {
+    if (!demoUrl) {
+      window.alert("No URL available right now.");
+      return;
+    }
+
+    window.open(demoUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="flex min-h-screen bg-background">
       {/* Transparent Sidebar */}
@@ -92,10 +109,12 @@ export default function ProfilePage() {
           <div className="mb-10 flex flex-col items-center">
             <div className="mb-4 relative">
               <div className="h-24 w-24 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 ring-2 ring-primary/10 overflow-hidden">
-                <img
-                  src="images/profile.png"
+                <Image
+                  src="/images/profile.jpg"
                   alt="Jerwin Louise Peria"
-                  className="h-full w-full object-cover"
+                  width={96}
+                  height={96}
+                  className="h-full w-full object-cover object-center"
                 />
               </div>
             </div>
@@ -223,7 +242,7 @@ export default function ProfilePage() {
           >
             <div className="space-y-4 lg:space-y-6">
               <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-balance">
-                Hi, I'm Jerwin
+                Hi, I&apos;m Jerwin
               </h2>
               <p className="text-xl lg:text-2xl xl:text-3xl text-muted-foreground text-balance max-w-4xl">
                 I’m an Information Technology Service Management (ITSM) major
@@ -245,9 +264,11 @@ export default function ProfilePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
               {/* Left Column - Image */}
               <div className="flex justify-center">
-                <img
-                  src="images/Jerwin-Pogi.jpg"
+                <Image
+                  src="/images/Jerwin-Pogi.jpg"
                   alt="Profile picture"
+                  width={384}
+                  height={384}
                   className="w-80 h-80 lg:w-96 lg:h-96 rounded-lg object-cover shadow-lg"
                 />
               </div>
@@ -420,104 +441,84 @@ export default function ProfilePage() {
             </h3>
 
             <div className="flex gap-2 mb-6 lg:mb-8 border-b border-border">
-              <button
-                onClick={() => setActiveProjectTab("web")}
-                className={`px-4 py-2 text-sm font-medium transition-colors relative ${
-                  activeProjectTab === "web"
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                Web Development Projects
-                {activeProjectTab === "web" && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
-                )}
-              </button>
-              <button
-                onClick={() => setActiveProjectTab("design")}
-                className={`px-4 py-2 text-sm font-medium transition-colors relative ${
-                  activeProjectTab === "design"
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                UI/UX and Figma Designs
-                {activeProjectTab === "design" && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
-                )}
-              </button>
+              {projectTabs.map((tab) => {
+                const isActive = activeProjectTab === tab.id;
+
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveProjectTab(tab.id)}
+                    className={`px-4 py-2 text-sm font-medium transition-colors relative ${
+                      isActive
+                        ? "text-foreground"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {tab.label}
+                    {isActive && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
+                    )}
+                  </button>
+                );
+              })}
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 xl:gap-8">
-              {(activeProjectTab === "web" ? webProjects : designProjects).map(
-                (project, index) => (
-                  <Card
-                    key={index}
-                    className="group hover:shadow-lg transition-shadow"
-                  >
-                    <CardHeader className="lg:p-6">
-                      <CardTitle className="group-hover:text-primary transition-colors lg:text-xl">
-                        {project.title}
-                      </CardTitle>
-                      <CardDescription className="lg:text-base">
-                        {project.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="lg:px-6 lg:pb-6">
-                      <p className="text-sm lg:text-base text-muted-foreground mb-4">
-                        {project.details}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.technologies.map((tech) => (
-                          <Badge
-                            key={tech}
-                            variant="outline"
-                            className="text-xs"
-                          >
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                      <div className="flex gap-2">
+              {activeProjects.map((project, index) => (
+                <Card key={index} className="group hover:shadow-lg transition-shadow">
+                  <CardHeader className="lg:p-6">
+                    <CardTitle className="group-hover:text-primary transition-colors lg:text-xl">
+                      {project.title}
+                    </CardTitle>
+                    <CardDescription className="lg:text-base">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="lg:px-6 lg:pb-6">
+                    <p className="text-sm lg:text-base text-muted-foreground mb-4">
+                      {project.details}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech) => (
+                        <Badge key={tech} variant="outline" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="flex gap-2">
+                      <Button
+                        variant="default"
+                        size="sm"
+                        className="flex-1 lg:text-sm"
+                        onClick={() => openDemoLink(project.demoUrl)}
+                      >
+                        <span className="gap-2 inline-flex items-center">
+                          <ExternalLink className="h-3.5 w-3.5" />
+                          Open
+                        </span>
+                      </Button>
+                      {project.repoUrl && (
                         <Button
-                          variant="default"
+                          variant="outline"
                           size="sm"
-                          className="flex-1 lg:text-sm"
+                          className="flex-1 bg-transparent lg:text-sm"
                           asChild
                         >
                           <a
-                            href={project.demoUrl}
+                            href={project.repoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="gap-2"
                           >
-                            <ExternalLink className="h-3.5 w-3.5" />
-                            Open
+                            <Github className="h-3.5 w-3.5" />
+                            View Repository
                           </a>
                         </Button>
-                        {project.repoUrl && (
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="flex-1 bg-transparent lg:text-sm"
-                            asChild
-                          >
-                            <a
-                              href={project.repoUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="gap-2"
-                            >
-                              <Github className="h-3.5 w-3.5" />
-                              View Repository
-                            </a>
-                          </Button>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                )
-              )}
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </section>
 
@@ -591,6 +592,7 @@ export default function ProfilePage() {
                       <span>{item.organization}</span>
 
                       {activeExperienceTab === "certification" &&
+                        "certificateUrl" in item &&
                         item.certificateUrl && (
                           <Button
                             variant="outline"
