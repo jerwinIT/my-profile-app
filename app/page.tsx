@@ -16,6 +16,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { navItems, socialLinks } from "@/constant/navigation";
@@ -35,6 +44,7 @@ export default function ProfilePage() {
   const [activeExperienceTab, setActiveExperienceTab] =
     useState("certification");
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isNoUrlDialogOpen, setIsNoUrlDialogOpen] = useState(false);
 
   const projectTabs = [
     { id: "web", label: "Web Development Projects" },
@@ -94,7 +104,7 @@ export default function ProfilePage() {
 
   const openDemoLink = (demoUrl?: string) => {
     if (!demoUrl) {
-      window.alert("No URL available right now.");
+      setIsNoUrlDialogOpen(true);
       return;
     }
 
@@ -641,6 +651,20 @@ export default function ProfilePage() {
           })}
         </div>
       </nav>
+
+      <AlertDialog open={isNoUrlDialogOpen} onOpenChange={setIsNoUrlDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>URL not available</AlertDialogTitle>
+            <AlertDialogDescription>
+              No demo URL is available right now for this project.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction>OK</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

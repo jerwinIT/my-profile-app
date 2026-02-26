@@ -20,7 +20,7 @@ export const webProjects = [
     details:
       "Developed a real-time task management application with team collaboration features, drag-and-drop interface, and progress tracking.",
     technologies: ["Next.js", "TailwindCSS", "ShadCN", "PostgreSQL", "RestAPI", "LeafletJS"],
-    demoUrl: "https://geoinvest-batangas.vercel.app",
+    demoUrl: "",
     repoUrl: "https://github.com/jerwinIT/geoinvest-batangas",
   },
   {
@@ -29,7 +29,7 @@ export const webProjects = [
     details:
       "Developed a real-time task management application with team collaboration features, drag-and-drop interface, and progress tracking.",
     technologies: ["Next.js", "TailwindCSS", "ShadCN", "PostgreSQL", "RestAPI", "LeafletJS"],
-    demoUrl: "https://geocrime-batangas.vercel.app",
+    demoUrl: "",
     repoUrl: "https://github.com/jerwinIT/geocrime",
   },
   {
@@ -38,8 +38,8 @@ export const webProjects = [
     details:
       "Developed a real-time task management application with team collaboration features, drag-and-drop interface, and progress tracking.",
     technologies: ["React", "Express.js", "Node.js", "PostgreSQL", "RestAPI"],
-    demoUrl: "https://example.com/demo",
-    repoUrl: "https://github.com/jerwinIT/resource-generation-office",
+    demoUrl: "",
+    repoUrl: "https://github.com/jerwinIT/resource_generation_office",
   },
   {
     title: "JPJ Motorcycle Parts and Accessories",
@@ -56,39 +56,41 @@ export const webProjects = [
     details:
       "Built an analytics dashboard that visualizes social media metrics with interactive charts, data export, and scheduled reports.",
     technologies: ["Next.js", "React.js", "Tailwind CSS"],
-    demoUrl: "https://example.com/demo",
-    repoUrl: "https://github.com/johndoe/analytics",
+    demoUrl: "https://jerwin-peria-app-eta.vercel.app/",
+    repoUrl: "https://github.com/jerwinIT/my-profile-app",
   },
 ];
 
 export const designProjects = [
   {
-    title: "Mobile Banking App UI",
-    description: "Modern banking interface design",
+    title: "Resource Generation Office",
+    description: "A student organization website design responsible for selling uniforms and other school-related products to students.",
     details:
-      "Designed a complete mobile banking experience with intuitive navigation, transaction history, and budgeting tools. Focused on accessibility and ease of use.",
-    technologies: ["Figma", "UI/UX", "Mobile Design"],
-    demoUrl: "https://figma.com/demo",
+      "Designed a modern and responsive website for the Resource Generation Office, featuring an intuitive layout, engaging visuals, and seamless navigation to enhance user experience.",
+    technologies: ["Figma"],
+    demoUrl: "https://www.figma.com/design/MvAO4zgsaClBIBiCFgbOdC/Interface?node-id=0-1&t=zbj3xOhISNEVxqfj-1",
     repoUrl: null,
   },
-  {
-    title: "E-learning Platform Design",
-    description: "Educational platform interface",
-    details:
-      "Created a comprehensive design system for an e-learning platform including course pages, video player, quizzes, and progress tracking.",
-    technologies: ["Figma", "Design System", "Prototyping"],
-    demoUrl: "https://figma.com/demo",
-    repoUrl: null,
-  },
-  {
-    title: "Restaurant Booking System",
-    description: "Reservation and menu management UI",
-    details:
-      "Designed an elegant restaurant booking interface with real-time table availability, menu browsing, and order management features.",
-    technologies: ["Figma", "UI Design", "User Flow"],
-    demoUrl: "https://figma.com/demo",
-    repoUrl: null,
-  },
+{
+  title: "GeoSME Batangas Landing Page (Draft)",
+  description: "Dark and light mode landing page design for the GeoSME Batangas platform.",
+  details:
+    "A responsive Figma prototype designed as the public entry point of GeoSME Batangas, featuring theme switching and a clean, modern layout.",
+  technologies: ["Figma", "UI/UX Design", "Prototyping"],
+  demoUrl: "https://www.figma.com/proto/ji5N1KFcYa58DjQeGDjV3F/GeoSME-Landing-Page?node-id=31-1978&starting-point-node-id=31%3A1586&t=NYtWfbqhqnMtEyrt-1",
+  repoUrl: null,
+},
+{
+  title: "SDG 2: Zero Hunger Wireframes",
+  description: "An school activity wireframe design for a web-based platform focused on SDG 2: Zero Hunger, aimed at raising awareness and providing resources to combat hunger globally.",
+  details:
+    "Designed wireframes for a web platform dedicated to SDG 2: Zero Hunger, featuring an intuitive layout, engaging visuals, and seamless navigation to enhance user experience and promote awareness about global hunger issues.",
+  technologies: ["Figma", "UI/UX Design", "Prototyping"],
+  demoUrl: "https://www.figma.com/proto/WpKuhVk6J92WXKUObE2MIR/SDG-2--Zero-Hunger-Wireframes?node-id=122-225&starting-point-node-id=122%3A287&t=A5LDAAqGOyCy1pGV-1",
+  repoUrl: null,
+}
+
+
 ];
 
 export const experienceData = [
